@@ -20,7 +20,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Pages
     .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
     .when("/faq", {templateUrl: "partials/faq.html", controller: "PageCtrl"})
-    .when("/properties", {templateUrl: "partials/properties.html", controller: "PageCtrl"})
+    .when("/properties", {templateUrl: "partials/pricing.html", controller: "PageCtrl"})
     .when("/services", {templateUrl: "partials/services.html", controller: "PageCtrl"})
     .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
     // Blog
