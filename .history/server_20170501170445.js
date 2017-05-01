@@ -39,7 +39,7 @@ res.sendFile(__dirname + "/public/index.html");
 });
 
 app.post('/view1', function(req, res) {
-  console.log("postsearch");
+  console.log("post");
     console.log(res.body.desc);
     res.end();
 });
