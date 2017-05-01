@@ -20,9 +20,9 @@
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 
 						<div class="header-right-search">
-							<form ng-submit="sub()">
-								<input type="text" ng-model="formData.desc" placeholder="Search" required="" />
-								<button type="submit" ng-click="sub(desc)"></button>
+							<form action="/" method="post" ng-submit="sub()">
+								<input type="search" ng-model="searchid" placeholder="Search" required="" />
+								<button ng-click="sub(desc)"></button>
 							</form>
 						</div>
 						
