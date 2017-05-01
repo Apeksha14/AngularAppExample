@@ -33,7 +33,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 /**
  * Controls the Blog
  */
-app.controller('BlogCtrl', function ($scope, $location, $http ) {
+app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
   console.log("Blog Controller reporting for duty.");
   $scope.sub = function() {
         $http.post('/view1',$scope.formData).
