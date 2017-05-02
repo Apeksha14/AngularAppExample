@@ -1,0 +1,44 @@
+		<div class="component">
+				
+				<table>
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>URL</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in items">
+                            
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td><a>{{item.url}}></a></td>
+                            
+                        
+                        
+                        
+                        
+                        </tr>
+					</tbody>
+				</table>
+				
+			</div>
+
+            <div id="mapprop"></div>
+
+             
+      <script>
+      function initMap() {
+        var uluru = {lat:35.340545, lng: -80.779269};
+        var map = new google.maps.Map(document.getElementById('mapprop'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+      </script>

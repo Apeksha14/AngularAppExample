@@ -1,0 +1,27 @@
+		<div class="component" ng-controller="myCtrl">
+				
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Phone</th>
+							<th>Mobile</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in items">
+                            
+                            <td ng-repeat="item in items.id">{{item.id}}</td>
+                            <td>{{item.latitude}}</td>
+                            <td>{{item.longitude}}</td>
+                            <td>{{item.name}}</td>
+                        
+                        
+                        
+                        
+                        </tr>
+					</tbody>
+				</table>
+				
+			</div>
