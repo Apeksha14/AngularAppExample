@@ -16,7 +16,6 @@ var app = angular.module('tutorialWebApp', [
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
-   
     .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
     // Pages
     .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
@@ -86,7 +85,7 @@ $http(configObj)
 
   });
 }
- /* $scope.sub= function(){
+   /*$scope.sub= function(){
      console.log($scope.this.this.zipcode);
       var data = $scope.this.this.zipcode;
 
@@ -120,16 +119,16 @@ $http(configObj)
 
   });
 
-       /*$http.get("http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=X1-ZWz19821g6hgqz_3s95g&state=NC&city=charlotte&childtype=neighborhood")*/
-//}
-   
+       /*$http.get("http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=X1-ZWz19821g6hgqz_3s95g&state=NC&city=charlotte&childtype=neighborhood")
+   }*/
+   //}
       
 });
 
 app.controller('PageCtrl', function ( $scope, $location, $http ) {
   console.log("Page Controller reporting for duty."); 
   $scope.items = searchResult;  
-
+  
  // initMap($scope.items);
   // Activates the Carousel
   $('.carousel').carousel({
@@ -199,15 +198,4 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
           });
         }
       }
-    }*/
-    
-    app.controller('login', function($scope,$http,$location) {
-  console.log("login");
-$scope.login= function(){
-   /*  console.log($scope.this.this.zipcode);
-      var data = $scope.this.this.zipcode;
-console.log($scope.this.this.zipcode);
-var data = $scope.this.this.zipcode;*/
-
-}
-});
+      }*/

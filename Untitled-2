@@ -1,0 +1,15 @@
+ jIwcIr4ytCcEJUsM9AEu2J5RMUV2T0ncJTpskt0O5csO7UBgvfKxYQpKKlNEmbQ5
+
+ https://www.zipcodeapi.com/rest/ jIwcIr4ytCcEJUsM9AEu2J5RMUV2T0ncJTpskt0O5csO7UBgvfKxYQpKKlNEmbQ5/city-zips.<format>/<city>/<state>.
+
+ https://www.zipcodeapi.com/rest/t6iMOqBUYrkSGbuFwSegmdNy5LgjER18XjUMKwHIY2BEd5kJYzZlNNTSyacd1dmZ/city-zips.json/Charlotte/NC
+
+
+  a59f7a903ece4a8628bef5dcffa48b0a
+
+  https://search.onboard-apis.com/propertyapi/v1.0.0/property/address?apikey=a59f7a903ece4a8628bef5dcffa48b0a&postalcode=82009&page=1&pagesize=100
+
+
+
+
+curl -X GET --header "Accept: application/json" --header "apikey: 2cf047aecdeee859215b71b90d180923" "https://search.onboard-apis.com/propertyapi/v1.0.0/property/address?postalcode=82009&page=1&pagesize=100"

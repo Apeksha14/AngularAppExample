@@ -86,7 +86,7 @@ $http(configObj)
 
   });
 }
- /* $scope.sub= function(){
+  $scope.sub= function(){
      console.log($scope.this.this.zipcode);
       var data = $scope.this.this.zipcode;
 
@@ -121,7 +121,7 @@ $http(configObj)
   });
 
        /*$http.get("http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=X1-ZWz19821g6hgqz_3s95g&state=NC&city=charlotte&childtype=neighborhood")*/
-//}
+   }
    
       
 });
@@ -130,6 +130,7 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
   console.log("Page Controller reporting for duty."); 
   $scope.items = searchResult;  
 
+  $location.path('/');
  // initMap($scope.items);
   // Activates the Carousel
   $('.carousel').carousel({

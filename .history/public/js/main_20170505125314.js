@@ -16,7 +16,6 @@ var app = angular.module('tutorialWebApp', [
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     // Home
-   
     .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
     // Pages
     .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
@@ -53,40 +52,39 @@ console.log($scope.this.this.zipcode);
 var data = $scope.this.this.zipcode;
 
 console.log(data);
-//var xheaders = {};
-//xheaders["apikey"] = 'a5ycuqrxsukeztxwmxdowwxx';
+var xheaders = {};
+xheaders["apikey"] = '2cf047aecdeee859215b71b90d180923';
 
 var xurl = 'http://api.greatschools.org/schools/NC/Charlotte?key=a5ycuqrxsukeztxwmxdowwxx';
 var configObj = { method: 'GET',
-                  url: xurl 
-                  
+                  url: xurl, 
+                  headers: xheaders
                 };
 $http(configObj)
     .then(function onFulfilled(response) {
         console.log(response);
          $scope.items = [];
-    for(var i=0;i<response.data.schools.school.length;i++)
+    for(var i=0;i<response.data.property.length;i++)
     {
       $scope.items[i] =
 
       {  
-        "name":response.data.schools.school[i].name,
-        "type":response.data.schools.school[i].type,
-        "address" :response.data.schools.school[i].address
+        "name":response.data.property[i].address.oneLine,
         
+        "lat":response.data.property[i].location.latitude,
+        "long":response.data.property[i].location.longitude
       }
 
       
     }
     
     searchResult = $scope.items;
-    console.log(searchResult);
     $location.path('/search/');
     
 
   });
 }
- /* $scope.sub= function(){
+   /*$scope.sub= function(){
      console.log($scope.this.this.zipcode);
       var data = $scope.this.this.zipcode;
 
@@ -120,17 +118,17 @@ $http(configObj)
 
   });
 
-       /*$http.get("http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=X1-ZWz19821g6hgqz_3s95g&state=NC&city=charlotte&childtype=neighborhood")*/
-//}
-   
+       /*$http.get("http://www.zillow.com/webservice/GetRegionChildren.htm?zws-id=X1-ZWz19821g6hgqz_3s95g&state=NC&city=charlotte&childtype=neighborhood")
+   }*/
+   //}
       
 });
 
 app.controller('PageCtrl', function ( $scope, $location, $http ) {
   console.log("Page Controller reporting for duty."); 
   $scope.items = searchResult;  
-
- // initMap($scope.items);
+  
+/*  initMap($scope.items);
   // Activates the Carousel
   $('.carousel').carousel({
     interval: 5000
@@ -140,7 +138,7 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
   $('.tooltip-social').tooltip({
     selector: "a[data-toggle=tooltip]"
   })
-});
+});*/
 
 /*function initMap(searchResult) {
    console.log("searchResult");
@@ -165,7 +163,7 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
       }
 }*/
 
-   /*   function initMap(searchResult) {
+      function initMap(searchResult) {
         var map;
         console.log(JSON.stringify(searchResult));
         map = new google.maps.Map(document.getElementById('mapprop'), {
@@ -199,15 +197,4 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
           });
         }
       }
-    }*/
-    
-    app.controller('login', function($scope,$http,$location) {
-  console.log("login");
-$scope.login= function(){
-   /*  console.log($scope.this.this.zipcode);
-      var data = $scope.this.this.zipcode;
-console.log($scope.this.this.zipcode);
-var data = $scope.this.this.zipcode;*/
-
-}
-});
+      }

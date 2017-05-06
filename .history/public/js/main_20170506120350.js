@@ -130,6 +130,7 @@ app.controller('PageCtrl', function ( $scope, $location, $http ) {
   console.log("Page Controller reporting for duty."); 
   $scope.items = searchResult;  
 
+  $location.path('/');
  // initMap($scope.items);
   // Activates the Carousel
   $('.carousel').carousel({

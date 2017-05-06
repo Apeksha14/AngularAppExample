@@ -3,19 +3,18 @@
 				<table>
 					<thead>
 						<tr>
-							<th>School Name</th>
-							<th>Type</th>
-							<th>Address</th>
+							<th>ID</th>
+							<th>Name</th>
+							<th>URL</th>
 							
 						</tr>
 					</thead>
 					<tbody>
 						<tr ng-repeat="item in items">
                             
+                            <td>{{item.id}}</td>
                             <td>{{item.name}}</td>
-                            <td>{{item.type}}</td>
-                            <!--<td><a ng-href="{{item.url}}">{{item.url}}</a></td>-->
-							<td>{{item.address}}</td>
+                            <td><a ng-href="{{item.url}}">{item.url}></a></td>
           
                         </tr>
 					</tbody>
